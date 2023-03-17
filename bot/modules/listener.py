@@ -659,7 +659,7 @@ class MirrorLeechListener:
             if self.uid in download_dict.keys():
                 del download_dict[self.uid]
             count = len(download_dict)
-        msg = f"{self.tag} your download has been stopped due to: {escape(error)}"
+        msg = f"#Task_Stopped \n\n ⚔️{self.tag} your download has been stopped \n\n ⚔️Reason : {escape(error)}\n\n<a href='https://t.me/Maste_Torrenz_Updates/270'>💎⊱✤┅┅┅●(Buy Kingdom's Premium Pass)●┅┅┅✤⊰💎</a>"
         sendMessage(msg, self.bot, self.message)
         if count == 0:
             self.clean()
