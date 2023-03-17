@@ -367,7 +367,8 @@ def get_readable_message():
             bmsg = f"🖥 {TASKS_COUNT}"
             bmsg += f"<b>🖥 CPU:</b> {cpu_percent()}% | <b>💿 FREE:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
             bmsg += f"\n<b>🎮 RAM:</b> {virtual_memory().percent}% | <b>🟢 UPTIME:</b> {get_readable_time(time() - botStartTime)}"
-            bmsg += f"\n<b>🔽 DL:</b> {get_readable_file_size(dl_speed)}/s | <b>🔼 UL:</b> {get_readable_file_size(up_speed)}/s"
+            bmsg += f"\n<b>🔻 DL:</b> {get_readable_file_size(dl_speed)}/s | <b>🔺 UL:</b> {get_readable_file_size(up_speed)}/s"
+            bmsg += f"\n<b>💙 Version: </b><code>Master Torrenz Lite #2 𝑉4</code>"
         else:
             bmsg = f"{TASKS_COUNT}"
             bmsg += f"<b>CPU:</b> {cpu_percent()}% | <b>FREE:</b> {get_readable_file_size(disk_usage(DOWNLOAD_DIR).free)}"
@@ -375,9 +376,10 @@ def get_readable_message():
             bmsg += f"\n<b>DL:</b> {get_readable_file_size(dl_speed)}/s | <b>UL:</b> {get_readable_file_size(up_speed)}/s"
         
         buttons = ButtonMaker()
-        buttons.sbutton("Refresh", "status refresh")
-        buttons.sbutton("Statistics", str(THREE))
-        buttons.sbutton("Close", "status close")
+        buttons.sbutton("♻️Refresh♻️", "status refresh")
+        buttons.sbutton("🔻Statistics🔻", str(THREE))
+        buttons.sbutton("❌Close❌", "status close")
+        buttons.sbutton("𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝑩𝒚 ᗰIᖇᖇOᖇ  ᒪᕮᕮᑕᕼ  KIᑎGᗪOᗰ", "https://t.me/Mirror_Leech_Kingdom")
         sbutton = buttons.build_menu(3)
         
         if STATUS_LIMIT and tasks > STATUS_LIMIT:
@@ -390,11 +392,13 @@ def get_readable_message():
                 buttons.sbutton("Refresh", "status refresh")
                 buttons.sbutton("Close", "status close")
             else:
-                buttons.sbutton("Previous", "status pre")
+                buttons.sbutton("⫷", "status pre")
                 buttons.sbutton(f"{PAGE_NO}/{PAGES}", str(THREE))
-                buttons.sbutton("Next", "status nex")
-                buttons.sbutton("Refresh", "status refresh")
-                buttons.sbutton("Close", "status close")
+                buttons.sbutton("⫸", "status nex")
+                buttons.sbutton("♻️Refresh♻️", "status refresh")
+                buttons.sbutton("📢 Updates Channel 📢", "@Maste_Torrenz_Updates")
+                buttons.sbutton("❌Close❌", "status close")
+                buttons.sbutton("𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝑩𝒚 ᗰIᖇᖇOᖇ  ᒪᕮᕮᑕᕼ  KIᑎGᗪOᗰ", "https://t.me/Mirror_Leech_Kingdom")
             button = buttons.build_menu(3)
             return msg + bmsg, button
         return msg + bmsg, sbutton
@@ -702,18 +706,18 @@ def bot_sys_stats():
     mem = virtual_memory().percent
     disk = disk_usage("/").percent
     return f"""
-Modified by {config_dict['CREDIT_NAME']}
+Created by {config_dict['CREDIT_NAME']}
 
-Tasks: {tasks}
+📝Tasks: {tasks}
 
-CPU: {progress_bar(cpu)} {cpu}%
-RAM: {progress_bar(mem)} {mem}%
-DISK: {progress_bar(disk)} {disk}%
+🖥️CPU: {progress_bar(cpu)} {cpu}%
+⚡RAM: {progress_bar(mem)} {mem}%
+💽DISK: {progress_bar(disk)} {disk}%
 
-SENT: {sent} | RECV: {recv}
+📤SENT: {sent} | 📥RECV: {recv}
 
-DLs: {num_active} | ULs: {num_upload} | SEEDING: {num_seeding}
-ZIP: {num_zip} | UNZIP: {num_unzip} | SPLIT: {num_split}
+⬇️DLs: {num_active} | ⬆️ULs: {num_upload} | ☘️SEEDING: {num_seeding}
+🤐ZIP: {num_zip} | 📂UNZIP: {num_unzip} | 🪓SPLIT: {num_split}
 """
     return stats
 dispatcher.add_handler(
