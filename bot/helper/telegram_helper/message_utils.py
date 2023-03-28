@@ -166,7 +166,7 @@ def forcesub(bot, message, tag):
         btn = ButtonMaker()
         for key, value in join_button.items():
             btn.buildbutton(key, value)
-        msg = f'Hey{tag}. You have to join our channel(s) In Order To Use Bots. Join And Try Again'
+        msg = f'Hey {tag} . You have to join our channel(s) In Order To Use Bots. Join And Try Again'
         reply_message = sendMessage(msg, bot, message, btn.build_menu(1))
         return reply_message
 
