@@ -55,7 +55,7 @@ def get_user_settings(from_user, key=None):
     user_dict = user_data.get(user_id, False)
     if not user_dict:
         update_user_ldata(user_id, 'ubot_pm', config_dict['BOT_PM'])
-    uplan = "Paid User" if is_paid(user_id) else "Normal User"
+    uplan = "💜Paid User" if is_paid(user_id) else "🔻Normal User"
     if key is None:
         buttons.sbutton("🚨 Universal Profile 🚨", f"userset {user_id} universal")
         buttons.sbutton("☘️ Mirror Settings ☘️", f"userset {user_id} mirror")
@@ -109,9 +109,18 @@ def get_user_settings(from_user, key=None):
         button = buttons.build_menu(2)
         text = f'''<u>🔥Universal Profile Settings For Master <a href='tg://user?id={user_id}'>{name}</a>🔥</u>
         
-♾️All Settings will be saved in our MongoDB database.
+✤┅┅┅●(Master Torrenz)●┅┅┅✤
 
-✤┅┅┅●(Master Torrenz Premium Z)●┅┅┅✤
+《🌐 YOUR LIMITS 🌐》
+
+☘️Mirror- 70GB/per task
+☘️Leech- 70GB/per task
+☘️Clone- 70GB/per task
+☘️YT-DLP- 70GB/per task
+☘️Max Playlist- 70 Videos
+☘️ZIP-UNZIP-70GB/per task
+☘️Mega- 70GB/per task
+☘️Time Gap- 120sec
 
 ✨ YT-DLP Quality : <b>{escape(ytq)}</b>
 ✨ Daily Tasks : <b>{dailytas} / {dailytl} per day</b>
@@ -172,9 +181,18 @@ def get_user_settings(from_user, key=None):
         button = buttons.build_menu(2)
         text = f'''<u>✨Mirror/Clone Settings for Master <a href='tg://user?id={user_id}'>{name}</a>✨</u>
         
-♾️All Settings will be saved in our MongoDB database.
+✤┅┅┅●(Master Torrenz)●┅┅┅✤
 
-✤┅┅┅●(Master Torrenz Premium Z)●┅┅┅✤
+《🌐 YOUR LIMITS 🌐》
+
+☘️Mirror- 70GB/per task
+☘️Leech- 70GB/per task
+☘️Clone- 70GB/per task
+☘️YT-DLP- 70GB/per task
+☘️Max Playlist- 70 Videos
+☘️ZIP-UNZIP-70GB/per task
+☘️Mega- 70GB/per task
+☘️Time Gap- 120sec
 
 ♻️ Prefix : <b>{escape(prefix)}</b>
 ♻️ Suffix : <b>{suffix}</b>
@@ -230,9 +248,18 @@ def get_user_settings(from_user, key=None):
         button = buttons.build_menu(2)
         text = f'''<u>💫Leech Settings for Lord<a href='tg://user?id={user_id}'>{name}</a>💫</u>
         
-♾️All Settings will be saved in our MongoDB database.
+✤┅┅┅●(Master Torrenz)●┅┅┅✤
 
-✤┅┅┅●(Master Torrenz Premium Z)●┅┅┅✤
+《🌐 YOUR LIMITS 🌐》
+
+☘️Mirror- 70GB/per task
+☘️Leech- 70GB/per task
+☘️Clone- 70GB/per task
+☘️YT-DLP- 70GB/per task
+☘️Max Playlist- 70 Videos
+☘️ZIP-UNZIP-70GB/per task
+☘️Mega- 70GB/per task
+☘️Time Gap- 120sec
 
 🚀 Leech Type : <b>{ltype}</b>
 🚀 Custom Thumbnail : <b>{thumbmsg}</b>
