@@ -478,7 +478,7 @@ def main():
                 msg += f"Date: {date}\n"
                 msg += f"Time: {time}\n"
                 msg += f"Time Zone: {timez}\n"
-                msg += f"Repo Version: Master Torrenz V5.4
+                msg += f"Repo Version: Master Torrenz V5.4"
 
                 for tag, links in data.items():
                     msg += f"\n{tag}: "
@@ -517,7 +517,7 @@ def main():
             msg += f"Date: {date}\n"
             msg += f"Time: {time}\n"
             msg += f"Time Zone: {timez}\n"
-            msg += f"Repo Version: {version}"            
+            msg += f"Repo Version: Master Torrenz V5.4"            
             bot.edit_message_text(msg, chat_id, msg_id)
         except Exception as e:
             LOGGER.info(e)
