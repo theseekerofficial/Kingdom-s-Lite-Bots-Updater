@@ -712,7 +712,6 @@ def bot_sys_stats():
 ♻️RAM: {progress_bar(mem)} {mem}%
 💽DISK: {progress_bar(disk)} {disk}%
 
-
 🔺SENT: {sent} | 🔻RECV: {recv}
 
 🍀SEEDING: {num_seeding} | ✂️SPLIT: {num_split}
