@@ -152,20 +152,38 @@ def start(update, context):
     if config_dict['EMOJI_THEME']:
         buttons.buildbutton(f"{config_dict['START_BTN1_NAME']}", f"{config_dict['START_BTN1_URL']}")
         buttons.buildbutton(f"{config_dict['START_BTN2_NAME']}", f"{config_dict['START_BTN2_URL']}")
+        buttons.buildbutton(f"📢 Channel", f"https://t.me/Maste_Torrenz_Updates")
+        buttons.buildbutton(f"💰 Donate", f"https://www.paypal.com/donate/?hosted_button_id=VDL539XYV4A66")
     else:
         buttons.buildbutton(f"{config_dict['START_BTN1_NAME']}", f"{config_dict['START_BTN1_URL']}")
         buttons.buildbutton(f"{config_dict['START_BTN2_NAME']}", f"{config_dict['START_BTN2_URL']}")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''This bot can mirror all your links to Google Drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+        start_string = f'''🔥The Super Powered Master is online now 😈 | You can use me for any task 💚.
+        
+🔻For Now my Maximum DL Speed is 125 MB/s
+🔻For Now my Maximum UL Speed is 113 MB/s
+🔻Contact my creators using @TSSC_Support_Robot
+🔻So, why are you waiting for?👀 Add ur mirror or leech task right now! 🚀
+Type /{BotCommands.HelpCommand} to get a list of available commands 🤝
 '''
         if config_dict['PICS']:
             sendPhoto(start_string, context.bot, update.message, rchoice(config_dict['PICS']), reply_markup)
         else:
             sendMessage(start_string, context.bot, update.message, reply_markup)
     else:
-        text = f"Not Authorized user, deploy your own mirror bot"
+        text = f'''💠Hey, You can not use me in Private Message,
+        
+💠Please Join (https://t.me/Mirror_Leech_Kingdom) To use me.
+💠I can do many things. Some of them are 👇
+      ✨Upload any direct link to GDrive (No need Your google drive access, I upload files to my own shared drive)
+      ✨Upload any direct link to Telegram
+      ✨Mirror or Leech any Torrent without SIZE LIMIT 😨
+      ✨Download any YT Video ( All ytdl site supports too )
+      ✨Clone GDrive Files
+      
+💠Join the group and Try😍
+💠For more bots join our channel'''
         if config_dict['PICS']:
             sendPhoto(text, context.bot, update.message, rchoice(config_dict['PICS']), reply_markup)
         else:
@@ -207,7 +225,7 @@ def log(update, context):
 
 
 help_string = '''
-<b><a href='https://github.com/SN-Abdullah-Al-Noman/SN_WZML'>SN_WZML</a></b> - The Ultimate Telegram MIrror-Leech Bot to Upload Your File & Link in Google Drive & Telegram
+<b><a href='https://t.me/Maste_Torrenz_Updates'>Mirror Leech Kingdom</a></b> - The Ultimate Telegram MIrror-Leech Group to Upload Your File & Link in Google Drive & Telegram
 Choose a help category:
 '''
 
@@ -499,7 +517,7 @@ def main():
             msg += f"Date: {date}\n"
             msg += f"Time: {time}\n"
             msg += f"Time Zone: {timez}\n"
-            msg += f"Repo Version: {version}"            
+            msg += f"Repo Version: Master Torrenz V5.4"            
             bot.edit_message_text(msg, chat_id, msg_id)
         except Exception as e:
             LOGGER.info(e)
