@@ -20,11 +20,11 @@ from bot.helper.ext_utils.bot_utils import update_user_ldata, is_paid, is_sudo, 
 handler_dict = {}
 example_dict = {'prefix':'1. <code>@your_channel_username or Anything</code>', 
                 'mprefix':'1. <code>@your_channel_username or Anything</code>', 
-                'suffix':'1. <code>~ WZML</code>\n2. <code>~ @channelname</code>', 
-                'msuffix':'1. <code>~ WZML</code>\n2. <code>~ @channelname</code>', 
-                'caption': '1.'+escape("<b>{filename}</b>\nJoin Now : @WeebZone_updates")+'\nCheck all available fillings options <a href="">HERE</a> and Make Custom Caption.', 
+                'suffix':'1. <code>~ ML Kingdom</code>\n2. <code>~ @channelname</code>', 
+                'msuffix':'1. <code>~ ML Kingdom</code>\n2. <code>~ @channelname</code>', 
+                'caption': '1.'+escape("<b>{filename}</b>\nJoin Now : @Maste_Torrenz_Updates")+'\nCheck all available fillings options <a href="">HERE</a> and Make Custom Caption.', 
                 'userlog':'1. <code>-100xxxxxx or Channel ID</code>', 
-                'usertd':'1. <code>UserTD_Name 1TSYgS-88SkhkSuoS-KHSi7%^&s9HKj https://1.xyz.workers.dev/0:/Leecher</code>\n<b> Do not forget to add '+config_dict['SA_MAIL']+' to your TD as Content Manager</b>',
+                'usertd':'<u>⚠️Read this all very carefully before send anything to bot⚠️</u>\n\n ☘️Only Send Your Drive Details to this format.If you did not do it, your profile will be crash.\n\n <code>[UserTD_Name] [Your Gdrive/TD folder ID] [Your Gdrive/TD folder Index Link-Optional]</code>\n\n <u>🚨Remember</u>\n\n1.Do not add space to [UserTD_Name]. If you want to separate the words, use "_" | E.g.:- Test_Drive_1\n\n2.[Your Gdrive/TD folder ID] Example photo <a href="https://ibb.co/W0LfhrT">HERE</a>\n\n3.[Your Gdrive/TD folder Index Link-Optional] Is totally optional. If you do not want it just leave it empty.\n\n4.<b> Do not forget to add <code>'+config_dict['SA_MAIL']+'</code> to your TD as Manager</b>\n\n ✅After all your Bot send message need to look like this\n E.g. <code>Test_Drive_1 1gsBXzp4wINC_HEAbWdqR4fw2_lxGnmL6 https://mirror-leech-kingdom.site/0:/4.%20EDU/</code>\n\n For any assistant contact @MrUnknown114',
                 'remname':'<b>Syntax:</b> previousname:newname:times|previousname:newname:times\n\n1. Fork:Star|Here:Now:1|WZML\n\n<b>Output :</b> Star Now : Click Here.txt', 
                 'mremname':'<b>Syntax:</b> previousname:newname:times|previousname:newname:times\n\n1. Fork:Star|Here:Now:1|WZML\n\n<b>Output :</b> Star Now : Click Here.txt', 
                 'imdb_temp':'Check all available fillings options <a href="">HERE</a> and Make Custom Template.', 
@@ -55,12 +55,12 @@ def get_user_settings(from_user, key=None):
     user_dict = user_data.get(user_id, False)
     if not user_dict:
         update_user_ldata(user_id, 'ubot_pm', config_dict['BOT_PM'])
-    uplan = "Paid User" if is_paid(user_id) else "Normal User"
+    uplan = "💜Paid User" if is_paid(user_id) else "🔻Normal User"
     if key is None:
-        buttons.sbutton("Universal Settings", f"userset {user_id} universal")
-        buttons.sbutton("Mirror Settings", f"userset {user_id} mirror")
-        buttons.sbutton("Leech Settings", f"userset {user_id} leech")
-        buttons.sbutton("Close", f"userset {user_id} close")
+        buttons.sbutton("🚨 Universal Profile 🚨", f"userset {user_id} universal")
+        buttons.sbutton("☘️ Mirror Settings ☘️", f"userset {user_id} mirror")
+        buttons.sbutton("✨ Leech Settings ✨", f"userset {user_id} leech")
+        buttons.sbutton("⚔️ Close ⚔️", f"userset {user_id} close")
         text = "User Settings:"
         button = buttons.build_menu(1)
     elif key == 'universal':
@@ -107,15 +107,28 @@ def get_user_settings(from_user, key=None):
         buttons.sbutton("Back", f"userset {user_id} mback", 'footer')
         buttons.sbutton("Close", f"userset {user_id} close", 'footer')
         button = buttons.build_menu(2)
-        text = f'''<u>Universal Settings for <a href='tg://user?id={user_id}'>{name}</a></u>
+        text = f'''<u>🔥Universal Profile Settings For Master <a href='tg://user?id={user_id}'>{name}</a>🔥</u>
+        
+✤┅┅┅●(Master Torrenz)●┅┅┅✤
 
-YT-DLP Quality : <b>{escape(ytq)}</b>
-Daily Tasks : <b>{dailytas} / {dailytl} per day</b>
-Last Bot Used : <b>{lastused}</b>
-User Bot PM : <b>{ubotpm}</b>
-List Type : <b>{ulist}</b>
-IMDB : <b>{imdbval if imdbval else imdb}</b>
-AniList : <b>{anival if anival else anilist}</b>
+《🌐 YOUR LIMITS 🌐》
+
+☘️Mirror- 70GB/per task
+☘️Leech- 70GB/per task
+☘️Clone- 70GB/per task
+☘️YT-DLP- 70GB/per task
+☘️Max Playlist- 70 Videos
+☘️ZIP-UNZIP-70GB/per task
+☘️Mega- 70GB/per task
+☘️Time Gap- 120sec
+
+✨ YT-DLP Quality : <b>{escape(ytq)}</b>
+✨ Daily Tasks : <b>{dailytas} / {dailytl} per day</b>
+✨ Last Bot Used : <b>{lastused}</b>
+✨ User Bot PM : <b>{ubotpm}</b>
+✨ List Type : <b>{ulist}</b>
+✨ IMDB : <b>{imdbval if imdbval else imdb}</b>
+✨ AniList : <b>{anival if anival else anilist}</b>
 '''
     elif key == 'mirror':
         prefix = user_dict['mprefix'] if user_dict and user_dict.get('mprefix') else "Not Exists"
@@ -166,14 +179,27 @@ AniList : <b>{anival if anival else anilist}</b>
         buttons.sbutton("Back", f"userset {user_id} mback", 'footer')
         buttons.sbutton("Close", f"userset {user_id} close", 'footer')
         button = buttons.build_menu(2)
-        text = f'''<u>Mirror/Clone Settings for <a href='tg://user?id={user_id}'>{name}</a></u>
+        text = f'''<u>✨Mirror/Clone Settings for Master <a href='tg://user?id={user_id}'>{name}</a>✨</u>
 
-Prefix : <b>{escape(prefix)}</b>
-Suffix : <b>{suffix}</b>
-User TD Mode : <b>{usertdstatus}</b>
-User TeamDrive(s) : <b>{usertds if usertds else usertd}</b>
-Daily Upload : <b>{dailyup} / {dailytlup} per day</b>
-Remname : <code>{escape(remname)}</code>
+✤┅┅┅●(Master Torrenz)●┅┅┅✤
+
+《🌐 YOUR LIMITS 🌐》
+
+☘️Mirror- 70GB/per task
+☘️Leech- 70GB/per task
+☘️Clone- 70GB/per task
+☘️YT-DLP- 70GB/per task
+☘️Max Playlist- 70 Videos
+☘️ZIP-UNZIP-70GB/per task
+☘️Mega- 70GB/per task
+☘️Time Gap- 120sec
+
+♻️ Prefix : <b>{escape(prefix)}</b>
+♻️ Suffix : <b>{suffix}</b>
+♻️ User TD Mode : <b>{usertdstatus}</b>
+♻️ User TeamDrive(s) : <b>{usertds if usertds else usertd}</b>
+♻️ Daily Upload : <b>{dailyup} / {dailytlup} per day</b>
+♻️ Remname : <code>{escape(remname)}</code>
 '''
     elif key == 'leech':
         prefix = user_dict['prefix'] if user_dict and user_dict.get('prefix') else "Not Exists"
@@ -220,26 +246,39 @@ Remname : <code>{escape(remname)}</code>
         buttons.sbutton("Back", f"userset {user_id} mback", 'footer')
         buttons.sbutton("Close", f"userset {user_id} close", 'footer')
         button = buttons.build_menu(2)
-        text = f'''<u>Leech Settings for <a href='tg://user?id={user_id}'>{name}</a></u>
+        text = f'''<u>💫Leech Settings for Lord<a href='tg://user?id={user_id}'>{name}</a>💫</u>
 
-Leech Type : <b>{ltype}</b>
-Custom Thumbnail : <b>{thumbmsg}</b>
-UserLog : <b>{userlog}</b>
-Prefix : <b>{escape(prefix)}</b>
-Suffix : <b>{suffix}</b>
-Caption : <b>{escape(caption)}</b>
-CapFont : {cfont}
-Leech Split Size : <b>{lsplit}</b>
-Equal Split : <b>{esplits}</b>
-Daily Leech : <b>{dailyll} / {dailytlle} per day</b>
-Remname : <code>{escape(remname)}</code>
+✤┅┅┅●(Master Torrenz)●┅┅┅✤
+
+《🌐 YOUR LIMITS 🌐》
+
+☘️Mirror- 70GB/per task
+☘️Leech- 70GB/per task
+☘️Clone- 70GB/per task
+☘️YT-DLP- 70GB/per task
+☘️Max Playlist- 70 Videos
+☘️ZIP-UNZIP-70GB/per task
+☘️Mega- 70GB/per task
+☘️Time Gap- 120sec
+
+🚀 Leech Type : <b>{ltype}</b>
+🚀 Custom Thumbnail : <b>{thumbmsg}</b>
+🚀 UserLog : <b>{userlog}</b>
+🚀 Prefix : <b>{escape(prefix)}</b>
+🚀 Suffix : <b>{suffix}</b>
+🚀 Caption : <b>{escape(caption)}</b>
+🚀 CapFont : {cfont}
+🚀 Leech Split Size : <b>{lsplit}</b>
+🚀 Equal Split : <b>{esplits}</b>
+🚀 Daily Leech : <b>{dailyll} / {dailytlle} per day</b>
+🚀 Remname : <code>{escape(remname)}</code>
 '''
-    if uplan == "Paid User" and key:
+    if uplan == "💜Paid User" and key:
         ex_date = user_dict.get('expiry_date', False)
         if not ex_date: ex_date = 'Not Specified'
-        text += f"User Plan : <b>{uplan}</b>\n"
-        text += f"Expiry Date : <b>{ex_date}</b>"
-    elif key: text += f"User Plan : <b>{uplan}</b>"
+        text += f"✅User Plan : <b>{uplan}</b>\n"
+        text += f"👾Expiry Date : <b>{ex_date}</b>"
+    elif key: text += f"✅User Plan : <b>{uplan}</b>"
     return text, button
 
 def update_user_settings(message, from_user, key):
