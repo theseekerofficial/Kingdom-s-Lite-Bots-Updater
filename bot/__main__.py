@@ -159,7 +159,7 @@ def start(update, context):
         buttons.buildbutton(f"{config_dict['START_BTN2_NAME']}", f"{config_dict['START_BTN2_URL']}")
     reply_markup = buttons.build_menu(2)
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
-        start_string = f'''🔥The Super Powered Master Premium X is online now 😈 | You can use me for any task 💚.
+        start_string = f'''🔥The Super Powered Master is online now 😈 | You can use me for any task 💚.
         
 🔻For Now my Maximum DL Speed is 125 MB/s
 🔻For Now my Maximum UL Speed is 113 MB/s
@@ -478,7 +478,7 @@ def main():
                 msg += f"Date: {date}\n"
                 msg += f"Time: {time}\n"
                 msg += f"Time Zone: {timez}\n"
-                msg += f"Repo Version: MT Premium Z 1.0.5"
+                msg += f"Repo Version: Master Torrenz V5.4
 
                 for tag, links in data.items():
                     msg += f"\n{tag}: "
