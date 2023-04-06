@@ -273,12 +273,12 @@ def get_user_settings(from_user, key=None):
 🚀 Daily Leech : <b>{dailyll} / {dailytlle} per day</b>
 🚀 Remname : <code>{escape(remname)}</code>
 '''
-    if uplan == "Paid User" and key:
+    if uplan == "💜Paid User" and key:
         ex_date = user_dict.get('expiry_date', False)
         if not ex_date: ex_date = 'Not Specified'
-        text += f"User Plan : <b>{uplan}</b>\n"
-        text += f"Expiry Date : <b>{ex_date}</b>"
-    elif key: text += f"User Plan : <b>{uplan}</b>"
+        text += f"🪴User Plan : <b>{uplan}</b>\n"
+        text += f"✖️Expiry Date : <b>{ex_date}</b>"
+    elif key: text += f"🪴User Plan : <b>{uplan}</b>"
     return text, button
 
 def update_user_settings(message, from_user, key):
