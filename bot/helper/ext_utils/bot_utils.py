@@ -379,7 +379,7 @@ def get_readable_message():
         buttons.sbutton("♻️Refresh♻️", "status refresh")
         buttons.sbutton("🔻Statistics🔻", str(THREE))
         buttons.sbutton("❌Close❌", "status close")
-        buttons.sbutton("𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝑩𝒚 ᗰIᖇᖇOᖇ  ᒪᕮᕮᑕᕼ  KIᑎGᗪOᗰ", "https://t.me/Mirror_Leech_Kingdom")
+        buttons.sbutton("𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝑩𝒚 ᗰIᖇᖇOᖇ  ᒪᕮᕮᑕᕼ  KIᑎGᗪOᗰ", str(THREE))
         sbutton = buttons.build_menu(3)
         
         buttons = ButtonMaker()
@@ -390,7 +390,7 @@ def get_readable_message():
             buttons.sbutton("♻️Refresh♻️", "status refresh")
             buttons.sbutton("📊", str(THREE))
             buttons.sbutton("❌Close❌", "status close")
-            buttons.sbutton("𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝑩𝒚 ᗰIᖇᖇOᖇ  ᒪᕮᕮᑕᕼ  KIᑎGᗪOᗰ", str(THREE)
+            buttons.sbutton("𝑷𝒐𝒘𝒆𝒓𝒆𝒅 𝑩𝒚 ᗰIᖇᖇOᖇ  ᒪᕮᕮᑕᕼ  KIᑎGᗪOᗰ", str(THREE))
         else:
             buttons.sbutton("Previous", "status pre")
             buttons.sbutton(f"{PAGE_NO}/{PAGES}", str(THREE))
