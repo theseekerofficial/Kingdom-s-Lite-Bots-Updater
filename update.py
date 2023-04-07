@@ -12,8 +12,8 @@ basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     handlers=[FileHandler('log.txt'), StreamHandler()],
                     level=INFO)
 
-UPSTREAM_REPO = 'https://github.com/theseekerofficial/MT-Premium-Z'
-UPSTREAM_BRANCH = 'master'
+UPSTREAM_REPO = 'https://github.com/theseekerofficial/Kingdom-s-Lite-Bots-Updater'
+UPSTREAM_BRANCH = 'Master-Torrenz'
 
 if UPSTREAM_REPO is not None:
     if ospath.exists('.git'):
